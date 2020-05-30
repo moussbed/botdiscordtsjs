@@ -1,4 +1,6 @@
 const { Client } = require("discord.js");
+require("dotenv-extended").load();
+
 const client = new Client({ disableMentions: "none" });
 
 client.on("ready", () => {
@@ -17,4 +19,4 @@ client.on("message", (msg) => {
     });
 });
 
-client.login("NzE2MjQ4MTQ0MDM5NjQxMDk4.XtJD2g.h_8-1yMK8aN0bLl0BdiUgFhck3M");
+client.login(process.env.TOKEN_DISCORD);
